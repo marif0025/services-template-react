@@ -1,0 +1,95 @@
+.about-section {
+    .section-container {
+        display: flex;
+
+        .about-image {
+            width: 100%;
+            max-width: 528px;
+            display: none;
+
+            @include media(min, 768) {
+                display: block;
+            }
+        }
+
+        .section-text {
+            width: 100%;
+            margin-top: 4rem;
+
+            @include media(min, 768) {
+                margin-left: 80px;
+            }
+            
+            h3 {
+                width: 100%;
+                max-width: 430px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 1.2;
+
+                @include media(min, 768) {
+                    font-size: 48px;
+                }
+            }
+
+            p {
+                margin-top: 2rem;
+            }
+
+            .section-btn {
+                display: flex;
+                align-items: center;
+                margin-top: 4rem;
+
+                .btn-transparent {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 2rem;
+
+                    img {
+                        width: 24px;
+                    }
+
+                    .btn-text {
+                        margin-left: 1rem;
+                        color: $primary-color;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+
+        .section-text.stats--text {
+            margin-left: 0;
+            margin-right: 80px;
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.stats {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    width: 50%;
+
+    .num {
+        color: $primary-color;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 60px;
+    }
+
+    .tag {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 30px;
+    }
+}

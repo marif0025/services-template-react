@@ -1,0 +1,141 @@
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 980px;
+    margin: 2rem auto 0;
+
+    @include media(min, 768) {
+        margin: 7rem auto 0;
+        flex-direction: row;
+    }
+}
+
+.card {
+    align-items: center;
+    padding: 3rem 2rem 4rem;
+    color: var(--clr-text);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    @include media(min,768) {
+        max-width: 310px;
+    }
+
+    &--icon {
+        align-items: center;
+        background-color: $services-icon-dark;
+        border-radius: 50%;
+        display: flex;
+        height: 62px;
+        justify-content: center;
+        width: 62px;
+
+        i {
+            --icon-size: 32px;
+        }
+    }
+
+    &--title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &.highlighted {
+        box-shadow: 0px 8px 77px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .btn {
+        margin: auto;
+    }
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(196, 196, 196, 0.2);
+
+    .card-title-small {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .price-tag {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        color: $primary-color;
+        margin-top: 20px;
+        margin-bottom: 32px;
+    }
+}
+
+.package-features {
+    margin-top: 1.5rem;
+    margin-bottom: 4.5rem;
+    width: 100%;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 20px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.feature-status {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: relative;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 1px;
+    }
+
+    &.available {
+        &::after {
+            width: 10px;
+            height: 4px;
+            transform: rotate(-45deg);
+            border-bottom: 2px solid #666;
+            border-left: 2px solid #666;
+        }
+    }
+
+    &.not-available {
+        &::after,
+        &::before {
+            width: 12px;
+            height: 2px;
+            background-color: #666;
+            
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            transform: rotate(135deg);
+        }
+    }
+}

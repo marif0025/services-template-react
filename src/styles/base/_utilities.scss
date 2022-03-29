@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-family: 'Source Sans Pro', sans-serif;
+    --color-text: #333333;
+    --color-primary: #8C84F9;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-text);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+input,button,textarea {
+    border: 0;
+    background-color: transparent;
+    font-family: inherit;
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 60px 0;
+
+    @include media (min, 768) {
+        padding: 120px 0;
+    }
+}
+
+.section-heading {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+
+    @include media (min, 768) {
+        font-size: 64px;
+    }
+}
+
+.desc {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+}
+
+.sec-bg {
+    background-color: $section-bg-color;
+}
+
+.icon {
+    --icon-size: 20px;
+    align-items: center;
+    color: inherit;
+    display: flex;
+    height: var(--icon-size);
+    justify-content: center;
+    max-width: var(--icon-size);
+    min-width: var(--icon-size);
+
+    svg {
+        fill: currentColor;
+        height: 100%;
+        width: 100%;
+    }
+}
+
