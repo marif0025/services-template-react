@@ -1,13 +1,16 @@
 .icon {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    --icon-size: 20px;
+    align-items: center;
+    color: inherit;
+    display: flex;
+    height: var(--icon-size);
+    justify-content: center;
+    max-width: var(--icon-size);
+    min-width: var(--icon-size);
 
-.icon-arrowdown {
-    @extend .icon;
-    // background-image: url($icon-arrowdown);
+    svg {
+        fill: currentColor;
+        height: 100%;
+        width: 100%;
+    }
 }

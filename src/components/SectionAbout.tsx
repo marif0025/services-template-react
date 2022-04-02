@@ -7,7 +7,7 @@ const SectionAbout = () => {
     return (
         <section id="about" className="about-section sec-bg">
             <Container classes={['section-container']}>
-                <div className="about-image"><img src={AboutImg} alt="About image" /></div>
+                <div className="about-image"><img src={AboutImg} alt="About" /></div>
 
                 <div className="section-text">
                     <h3>How We Help Others to Achieve their Goals?</h3>
@@ -17,10 +17,10 @@ const SectionAbout = () => {
 
                     <div className="section-btn">
                         <a href="#about" className="btn btn-primary">About us</a>
-                        <a href="#" className="btn-transparent">
+                        <button className="btn-transparent">
                             <Icon name="icon-play" />
                             <span className="btn-text">Watch Video</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </Container>

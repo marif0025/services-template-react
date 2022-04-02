@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@ html {
 :root {
     --font-family: 'Source Sans Pro', sans-serif;
     --color-text: #333333;
-    --color-primary: #8C84F9;
+    --color-primary: #8c84f9;
 }
 
 body {
@@ -32,7 +31,9 @@ img {
     width: 100%;
 }
 
-input,button,textarea {
+input,
+button,
+textarea {
     border: 0;
     background-color: transparent;
     font-family: inherit;
@@ -49,7 +50,7 @@ input,button,textarea {
 section {
     padding: 60px 0;
 
-    @include media (min, 768) {
+    @include media(min, 768) {
         padding: 120px 0;
     }
 }
@@ -59,7 +60,7 @@ section {
     font-weight: bold;
     text-align: center;
 
-    @include media (min, 768) {
+    @include media(min, 768) {
         font-size: 64px;
     }
 }
@@ -74,21 +75,3 @@ section {
 .sec-bg {
     background-color: $section-bg-color;
 }
-
-.icon {
-    --icon-size: 20px;
-    align-items: center;
-    color: inherit;
-    display: flex;
-    height: var(--icon-size);
-    justify-content: center;
-    max-width: var(--icon-size);
-    min-width: var(--icon-size);
-
-    svg {
-        fill: currentColor;
-        height: 100%;
-        width: 100%;
-    }
-}
-

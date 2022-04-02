@@ -19,7 +19,7 @@ const SectionStats = () => {
                 </div>
 
                 <div className="about-image">
-                    <img src={StatsImage} alt="stats image" />
+                    <img src={StatsImage} alt="stats" />
                 </div>
             </Container>
         </section>

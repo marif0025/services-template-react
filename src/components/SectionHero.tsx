@@ -1,6 +1,7 @@
 
 import Container from '../template-parts/Container';
 import ShowcaseImage from '../images/vector-1.png';
+import Icon from './Icon';
 
 const SectionHero = () => {
     return (
@@ -30,7 +31,9 @@ const SectionHero = () => {
                     </div>
                 </div>
 
-                <a href="#services" className="down-arrow"></a>
+                <a href="#services" className="down-arrow">
+                    <Icon name='icon-down' />
+                </a>
             </Container>
         </header>
     )

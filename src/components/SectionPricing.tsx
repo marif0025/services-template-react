@@ -93,8 +93,8 @@ const SectionPricing = () => {
 
                 <div className="cards-container">
                     {
-                        pricePackages.map(pricePackage => (
-                            <PricingCard pricePackage={pricePackage} />
+                        pricePackages.map((pricePackage, index) => (
+                            <PricingCard key={index} pricePackage={pricePackage} />
                         ))
                     }
                 </div>
