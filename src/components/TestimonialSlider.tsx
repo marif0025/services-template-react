@@ -10,7 +10,8 @@ const TestimonialSlider = () => {
 
             reviewer: {
                 name: 'Martin Desouza',
-                role: 'Web Developer'
+                role: 'Web Developer',
+                avatar: './assets/Images/avatar-1.png'
             }
         },
         {
@@ -18,7 +19,8 @@ const TestimonialSlider = () => {
 
             reviewer: {
                 name: 'Tom Hanks',
-                role: 'Digital Marketer'
+                role: 'Digital Marketer',
+                avatar: ''
             }
         },
         {
@@ -26,7 +28,8 @@ const TestimonialSlider = () => {
 
             reviewer: {
                 name: 'Nathan Heirch',
-                role: 'Graphic Designer'
+                role: 'Graphic Designer',
+                avatar: ''
             }
         }
     ]
@@ -36,7 +39,9 @@ const TestimonialSlider = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        nextArrow: <button></button>,
+        prevArrow: <button></button>
     };
 
     return (
@@ -44,7 +49,6 @@ const TestimonialSlider = () => {
             {
                 reviews.map((review, index) => (
                     <Testimonial key={index} review={review.review} reviewer={review.reviewer} />
-
                 ))
             }
         </Slider>

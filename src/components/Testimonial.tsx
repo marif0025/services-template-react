@@ -1,7 +1,10 @@
 
+import Avatar from '../images/avatar.png';
+
 type Reviewer = {
     name: string,
-    role: string
+    role: string,
+    avatar: string
 }
 
 type Review = {
@@ -18,7 +21,7 @@ const Testimonial = ({ review, reviewer }: Review) => {
 
             <div className="reviewer-details">
                 <div className="avatar">
-                    <img src="./assets/Images/avatar-1.png" alt="testimonial" />
+                    <img src={Avatar} alt="testimonial" />
                 </div>
 
                 <h3 className="reviewer-title">
